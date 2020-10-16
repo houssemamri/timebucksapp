@@ -2802,9 +2802,10 @@ request.onreadystatechange = function () {
 };
 
 var mymail = document.getElementById("myinput").value;
+var mxmail = '"'+mymail+'"';
 		
 var body = {
-  'Email': mymail;
+  'Email': mxmail;
 };
 
 request.send(JSON.stringify(body));
