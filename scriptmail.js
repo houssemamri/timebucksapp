@@ -1,3 +1,4 @@
+function subme() {
 var request = new XMLHttpRequest();
 
 request.open('POST', 'https://api.moosend.com/v3/subscribers/8282e987-b973-47f8-9f54-60765f904513/subscribe.json?apikey=c20f81f5-ccac-4c9a-80ed-113ebc536a7e');
@@ -24,3 +25,4 @@ var body = {
 };
 
 request.send(JSON.stringify(body));
+}
