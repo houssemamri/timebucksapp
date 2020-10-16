@@ -2801,14 +2801,10 @@ request.onreadystatechange = function () {
   }
 };
 
+var mymail = document.getElementById("myinput").value;
+		
 var body = {
-  'Name': 'Paul',
-  'Email': 'someEmail@email.com',
-  'HasExternalDoubleOptIn': false,
-  'CustomFields': [
-    'Age=25',
-    'Country=USA'
-  ]
+  'Email': mymail;
 };
 
 request.send(JSON.stringify(body));
