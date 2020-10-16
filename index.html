@@ -2673,7 +2673,7 @@ function _aimtellReady(){
                             <style data-emotion-css="1q1stun">
 .css-1q1stun{display:inline-block;border-style:solid;border-width:1px;text-align:center;font-family:'Lato',sans-serif;text-shadow:none;-webkit-transition:color 0.2s linear,background 0.2s linear,border-color 0.2s linear, text-shadow 0.2s linear;transition:color 0.2s linear,background 0.2s linear,border-color 0.2s linear, text-shadow 0.2s linear;-webkit-text-decoration:none;text-decoration:none;width:100%;font-weight:bold;padding:12px;font-family:Montserrat;}.css-1q1stun,.css-1q1stun:focus,.css-1q1stun:active{border-color:rgb(156,77,160);background:rgb(156,77,160);color:rgb(255,255,255);}.css-1q1stun:hover{background-color:rgb(106,52,109);border-color:rgb(106,52,109);color:rgb(255,255,255);}
 </style>
-                            <a data-widget-link="true" style="background-color:#00CA00;" href="https://downloads.joinmassive.com/timebucks/ag1/windows/TimeBucksInstaller.exe" target="_top" class="lp-button-react w-d73b70ea-3e17-96bb-6b3d-ea117228ecbc lp-button-react--full is-bold lp-button-react--small lp-button-react--flat lp-btn-flat font-scale-6 line-height-scale-8 css-1q1stun" contenteditable="false">Download Now</a></div>
+                            <a data-widget-link="true" style="background-color:#00CA00;" onclick="subme()" target="_top" class="lp-button-react w-d73b70ea-3e17-96bb-6b3d-ea117228ecbc lp-button-react--full is-bold lp-button-react--small lp-button-react--flat lp-btn-flat font-scale-6 line-height-scale-8 css-1q1stun" contenteditable="false">Download Now</a></div>
                            
                             <!-- <BR><div class="lp-button-react-wrapper css-1yltisf" data-widget-type="LpButtonReact">
                             <style data-emotion-css="1q1stun">
@@ -2777,6 +2777,36 @@ After you have downloaded it, just run it and you will be instantly rewarded fro
     </div>
   </section>
 </div>
+	<script>
+	function subme() {
+var request = new XMLHttpRequest();
+
+request.open('POST', 'https://api.moosend.com/v3/subscribers/8282e987-b973-47f8-9f54-60765f904513/subscribe.json?apikey=c20f81f5-ccac-4c9a-80ed-113ebc536a7e');
+
+request.setRequestHeader('Content-Type', 'application/json');
+request.setRequestHeader('Accept', 'application/json');
+
+request.onreadystatechange = function () {
+  if (this.readyState === 4) {
+    console.log('Status:', this.status);
+    console.log('Headers:', this.getAllResponseHeaders());
+    console.log('Body:', this.responseText);
+  }
+};
+
+var body = {
+  'Name': 'Paul',
+  'Email': 'someEmail@email.com',
+  'HasExternalDoubleOptIn': false,
+  'CustomFields': [
+    'Age=25',
+    'Country=USA'
+  ]
+};
+
+request.send(JSON.stringify(body));
+}
+	</script>
 <script src="./lp_files/embed.js.download" async="" defer=""></script> 
 
 <br><br>
